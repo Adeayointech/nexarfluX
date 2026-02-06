@@ -45,7 +45,7 @@ export default function Footer() {
               <h3 className="text-white font-semibold mb-4">Connect</h3>
               <div className="flex gap-4">
                 <a
-                  href="https://github.com"
+                  href="https://github.com/Adeayointech"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="bg-slate-800 p-3 rounded-lg text-slate-400 hover:text-primary-400 hover:bg-slate-700 transition-all transform hover:scale-110"

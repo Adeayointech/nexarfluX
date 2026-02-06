@@ -53,7 +53,7 @@ export default function Hero() {
           {/* Social Links */}
           <div className="flex gap-6 justify-center animate-fade-in delay-500">
             <a
-              href="https://github.com"
+              href="https://github.com/Adeayointech"
               target="_blank"
               rel="noopener noreferrer"
               className="text-slate-400 hover:text-primary-400 transition-colors transform hover:scale-110"

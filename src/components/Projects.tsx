@@ -13,6 +13,8 @@ export default function Projects() {
       tags: ['Next.js', 'TypeScript', 'Prisma', 'OpenAI', 'NextAuth'],
       category: 'web',
       gradient: 'from-blue-500 to-cyan-500',
+      githubUrl: 'https://github.com/Adeayointech/ai-humanizer',
+      liveUrl: null,
     },
     {
       title: 'Law Firm Platform',
@@ -20,6 +22,8 @@ export default function Projects() {
       tags: ['React', 'Node.js', 'PostgreSQL', 'TypeScript', 'JWT'],
       category: 'web',
       gradient: 'from-purple-500 to-pink-500',
+      githubUrl: 'https://github.com/Adeayointech/Law-firm-platform',
+      liveUrl: null,
     },
     {
       title: 'Aidy Mobile App',
@@ -27,6 +31,8 @@ export default function Projects() {
       tags: ['React Native', 'TypeScript', 'Firebase', 'Mobile'],
       category: 'mobile',
       gradient: 'from-green-500 to-emerald-500',
+      githubUrl: 'https://github.com/Adeayointech/Aidy',
+      liveUrl: null,
     },
     {
       title: 'Care Workers LMS',
@@ -34,6 +40,8 @@ export default function Projects() {
       tags: ['PHP', 'MySQL', 'JavaScript', 'cPanel'],
       category: 'web',
       gradient: 'from-orange-500 to-red-500',
+      githubUrl: 'https://github.com/Adeayointech/care-workers-lms',
+      liveUrl: null,
     },
     {
       title: 'Event Ticketing System',
@@ -41,6 +49,8 @@ export default function Projects() {
       tags: ['React', 'PHP', 'MySQL', 'REST API', 'JWT'],
       category: 'web',
       gradient: 'from-indigo-500 to-purple-500',
+      githubUrl: 'https://github.com/Adeayointech/ticketing-software',
+      liveUrl: null,
     },
   ];
 
@@ -118,20 +128,28 @@ export default function Projects() {
 
                   {/* Links */}
                   <div className="flex gap-4">
-                    <a
-                      href="#"
-                      className="flex items-center gap-2 text-primary-400 hover:text-primary-300 transition-colors"
-                    >
-                      <Github size={20} />
-                      <span className="text-sm font-medium">Code</span>
-                    </a>
-                    <a
-                      href="#"
-                      className="flex items-center gap-2 text-primary-400 hover:text-primary-300 transition-colors"
-                    >
-                      <ExternalLink size={20} />
-                      <span className="text-sm font-medium">Live Demo</span>
-                    </a>
+                    {project.githubUrl && (
+                      <a
+                        href={project.githubUrl}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="flex items-center gap-2 text-primary-400 hover:text-primary-300 transition-colors"
+                      >
+                        <Github size={20} />
+                        <span className="text-sm font-medium">Code</span>
+                      </a>
+                    )}
+                    {project.liveUrl && (
+                      <a
+                        href={project.liveUrl}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="flex items-center gap-2 text-primary-400 hover:text-primary-300 transition-colors"
+                      >
+                        <ExternalLink size={20} />
+                        <span className="text-sm font-medium">Live Demo</span>
+                      </a>
+                    )}
                   </div>
                 </div>
               </div>
