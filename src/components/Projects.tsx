@@ -15,6 +15,7 @@ export default function Projects() {
       gradient: 'from-blue-500 to-cyan-500',
       githubUrl: 'https://github.com/Adeayointech/ai-humanizer',
       liveUrl: null,
+      inProgress: false,
     },
     {
       title: 'Law Firm Platform',
@@ -22,8 +23,9 @@ export default function Projects() {
       tags: ['React', 'Node.js', 'PostgreSQL', 'TypeScript', 'JWT'],
       category: 'web',
       gradient: 'from-purple-500 to-pink-500',
-      githubUrl: 'https://github.com/Adeayointech/Law-firm-platform',
+      githubUrl: null,
       liveUrl: null,
+      inProgress: true,
     },
     {
       title: 'Aidy Mobile App',
@@ -31,8 +33,9 @@ export default function Projects() {
       tags: ['React Native', 'TypeScript', 'Firebase', 'Mobile'],
       category: 'mobile',
       gradient: 'from-green-500 to-emerald-500',
-      githubUrl: 'https://github.com/Adeayointech/Aidy',
+      githubUrl: null,
       liveUrl: null,
+      inProgress: true,
     },
     {
       title: 'Care Workers LMS',
@@ -42,6 +45,7 @@ export default function Projects() {
       gradient: 'from-orange-500 to-red-500',
       githubUrl: 'https://github.com/Adeayointech/care-workers-lms',
       liveUrl: null,
+      inProgress: false,
     },
     {
       title: 'Event Ticketing System',
@@ -51,6 +55,7 @@ export default function Projects() {
       gradient: 'from-indigo-500 to-purple-500',
       githubUrl: 'https://github.com/Adeayointech/ticketing-software',
       liveUrl: null,
+      inProgress: false,
     },
   ];
 
@@ -128,27 +133,36 @@ export default function Projects() {
 
                   {/* Links */}
                   <div className="flex gap-4">
-                    {project.githubUrl && (
-                      <a
-                        href={project.githubUrl}
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        className="flex items-center gap-2 text-primary-400 hover:text-primary-300 transition-colors"
-                      >
-                        <Github size={20} />
-                        <span className="text-sm font-medium">Code</span>
-                      </a>
-                    )}
-                    {project.liveUrl && (
-                      <a
-                        href={project.liveUrl}
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        className="flex items-center gap-2 text-primary-400 hover:text-primary-300 transition-colors"
-                      >
-                        <ExternalLink size={20} />
-                        <span className="text-sm font-medium">Live Demo</span>
-                      </a>
+                    {project.inProgress ? (
+                      <span className="flex items-center gap-2 text-amber-400 font-medium">
+                        <div className="w-2 h-2 bg-amber-400 rounded-full animate-pulse"></div>
+                        <span className="text-sm">In Progress</span>
+                      </span>
+                    ) : (
+                      <>
+                        {project.githubUrl && (
+                          <a
+                            href={project.githubUrl}
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            className="flex items-center gap-2 text-primary-400 hover:text-primary-300 transition-colors"
+                          >
+                            <Github size={20} />
+                            <span className="text-sm font-medium">Code</span>
+                          </a>
+                        )}
+                        {project.liveUrl && (
+                          <a
+                            href={project.liveUrl}
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            className="flex items-center gap-2 text-primary-400 hover:text-primary-300 transition-colors"
+                          >
+                            <ExternalLink size={20} />
+                            <span className="text-sm font-medium">Live Demo</span>
+                          </a>
+                        )}
+                      </>
                     )}
                   </div>
                 </div>
