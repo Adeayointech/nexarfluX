@@ -10,15 +10,37 @@ export default function Contact() {
     message: '',
   });
   const [isSubmitted, setIsSubmitted] = useState(false);
+  const [isLoading, setIsLoading] = useState(false);
+  const [error, setError] = useState('');
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    // Here you would typically send the form data to a backend
-    setIsSubmitted(true);
-    setTimeout(() => {
-      setIsSubmitted(false);
-      setFormData({ name: '', email: '', message: '' });
-    }, 3000);
+    setIsLoading(true);
+    setError('');
+
+    try {
+      const response = await fetch('/api/contact', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify(formData),
+      });
+
+      if (response.ok) {
+        setIsSubmitted(true);
+        setTimeout(() => {
+          setIsSubmitted(false);
+          setFormData({ name: '', email: '', message: '' });
+        }, 3000);
+      } else {
+        setError('Failed to send message. Please try again.');
+      }
+    } catch (err) {
+      setError('Something went wrong. Please try again.');
+    } finally {
+      setIsLoading(false);
+    }
   };
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
@@ -53,10 +75,10 @@ export default function Contact() {
                   <div>
                     <h3 className="text-white font-semibold mb-1">Email</h3>
                     <a
-                      href="mailto:your.email@example.com"
+                      href="mailto:nexarflux@gmail.com"
                       className="text-slate-400 hover:text-primary-400 transition-colors"
                     >
-                      your.email@example.com
+                      nexarflux@gmail.com
                     </a>
                   </div>
                 </div>
@@ -148,12 +170,19 @@ export default function Contact() {
                         />
                       </div>
 
+                      {error && (
+                        <div className="p-4 bg-red-500/10 border border-red-500/50 rounded-lg text-red-400 text-sm">
+                          {error}
+                        </div>
+                      )}
+
                       <button
                         type="submit"
-                        className="w-full px-8 py-4 bg-primary-500 hover:bg-primary-600 text-white rounded-lg font-semibold transition-all transform hover:scale-105 shadow-lg hover:shadow-primary-500/50 flex items-center justify-center gap-2"
+                        disabled={isLoading}
+                        className="w-full px-8 py-4 bg-primary-500 hover:bg-primary-600 disabled:bg-slate-700 disabled:cursor-not-allowed text-white rounded-lg font-semibold transition-all transform hover:scale-105 disabled:hover:scale-100 shadow-lg hover:shadow-primary-500/50 flex items-center justify-center gap-2"
                       >
                         <Send size={20} />
-                        Send Message
+                        {isLoading ? 'Sending...' : 'Send Message'}
                       </button>
                     </div>
                   </>

@@ -71,7 +71,7 @@ export default function Hero() {
               <Linkedin size={28} />
             </a>
             <a
-              href="mailto:your.email@example.com"
+              href="mailto:nexarflux@gmail.com"
               className="text-slate-400 hover:text-primary-400 transition-colors transform hover:scale-110"
               aria-label="Email"
             >
