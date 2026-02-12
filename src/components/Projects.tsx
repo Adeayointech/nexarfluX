@@ -44,7 +44,7 @@ export default function Projects() {
       category: 'web',
       gradient: 'from-orange-500 to-red-500',
       githubUrl: 'https://github.com/Adeayointech/care-workers-lms',
-      liveUrl: null,
+      liveUrl: 'http://joyce-learning-portal.ct.ws',
       inProgress: false,
     },
     {

@@ -13,13 +13,20 @@ export async function POST(req: NextRequest) {
       );
     }
 
-    // Create transporter
+    // Create transporter with explicit SMTP settings
     const transporter = nodemailer.createTransport({
-      service: 'gmail',
+      host: 'smtp.gmail.com',
+      port: 587,
+      secure: false, // Use STARTTLS
       auth: {
         user: process.env.GMAIL_USER,
         pass: process.env.GMAIL_APP_PASSWORD,
       },
+      tls: {
+        rejectUnauthorized: true,
+      },
+      // Force IPv4 to avoid IPv6 connectivity issues
+      family: 4,
     });
 
     // Email to you (the portfolio owner)
