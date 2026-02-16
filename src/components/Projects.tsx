@@ -132,37 +132,35 @@ export default function Projects() {
                   </div>
 
                   {/* Links */}
-                  <div className="flex gap-4">
-                    {project.inProgress ? (
+                  {/* Status & Links */}
+                  <div className="flex flex-wrap items-center gap-4">
+                    {project.inProgress && (
                       <span className="flex items-center gap-2 text-amber-400 font-medium">
                         <div className="w-2 h-2 bg-amber-400 rounded-full animate-pulse"></div>
                         <span className="text-sm">In Progress</span>
                       </span>
-                    ) : (
-                      <>
-                        {project.githubUrl && (
-                          <a
-                            href={project.githubUrl}
-                            target="_blank"
-                            rel="noopener noreferrer"
-                            className="flex items-center gap-2 text-primary-400 hover:text-primary-300 transition-colors"
-                          >
-                            <Github size={20} />
-                            <span className="text-sm font-medium">Code</span>
-                          </a>
-                        )}
-                        {project.liveUrl && (
-                          <a
-                            href={project.liveUrl}
-                            target="_blank"
-                            rel="noopener noreferrer"
-                            className="flex items-center gap-2 text-primary-400 hover:text-primary-300 transition-colors"
-                          >
-                            <ExternalLink size={20} />
-                            <span className="text-sm font-medium">Live Demo</span>
-                          </a>
-                        )}
-                      </>
+                    )}
+                    {project.githubUrl && (
+                      <a
+                        href={project.githubUrl}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="flex items-center gap-2 text-primary-400 hover:text-primary-300 transition-colors"
+                      >
+                        <Github size={20} />
+                        <span className="text-sm font-medium">Code</span>
+                      </a>
+                    )}
+                    {project.liveUrl && (
+                      <a
+                        href={project.liveUrl}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="flex items-center gap-2 text-primary-400 hover:text-primary-300 transition-colors"
+                      >
+                        <ExternalLink size={20} />
+                        <span className="text-sm font-medium">Live Demo</span>
+                      </a>
                     )}
                   </div>
                 </div>
