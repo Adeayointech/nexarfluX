@@ -9,12 +9,12 @@ export default function Projects() {
   const projects = [
     {
       title: 'AI Humanizer',
-      description: 'Advanced AI-powered text humanization platform built with Next.js 15, featuring OpenAI integration, user authentication, and PDF processing capabilities.',
-      tags: ['Next.js', 'TypeScript', 'Prisma', 'OpenAI', 'NextAuth'],
+      description: 'Advanced AI-powered text humanization platform built with Next.js 15, featuring Groq AI integration, user authentication, and PDF processing capabilities.',
+      tags: ['Next.js', 'TypeScript', 'Prisma', 'Groq AI', 'NextAuth'],
       category: 'web',
       gradient: 'from-blue-500 to-cyan-500',
       githubUrl: 'https://github.com/Adeayointech/ai-humanizer',
-      liveUrl: null,
+      liveUrl: 'https://ai-humanizer-three.vercel.app',
       inProgress: false,
     },
     {
