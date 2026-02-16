@@ -33,9 +33,18 @@ export default function Skills() {
       category: 'Mobile & Tools',
       skills: [
         { name: 'React Native', level: 85 },
+        { name: 'Expo', level: 85 },
+        { name: 'Flutter', level: 80 },
         { name: 'Git / GitHub', level: 95 },
-        { name: 'Firebase', level: 80 },
-        { name: 'cPanel / Deployment', level: 85 },
+      ],
+    },
+    {
+      category: 'Cloud & DevOps',
+      skills: [
+        { name: 'Vercel / Netlify', level: 90 },
+        { name: 'Firebase', level: 85 },
+        { name: 'Docker', level: 75 },
+        { name: 'CI/CD', level: 80 },
       ],
     },
   ];
@@ -97,20 +106,20 @@ export default function Skills() {
             </h3>
             <div className="flex flex-wrap gap-3">
               {[
-                'OpenAI API',
+                'AI Integration',
                 'NextAuth',
                 'JWT',
                 'Prisma',
-                'Firebase',
                 'Redux',
-                'REST',
-                'Git',
-                'Docker',
-                'Vercel',
-                'cPanel',
-                'VS Code',
-                'Postman',
+                'GraphQL',
+                'REST APIs',
+                'WebSockets',
+                'AWS',
+                'MongoDB',
+                'Redis',
+                'Jest / Testing',
                 'Figma',
+                'Agile / Scrum',
               ].map((tech, index) => (
                 <span
                   key={index}

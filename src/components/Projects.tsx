@@ -8,9 +8,9 @@ export default function Projects() {
 
   const projects = [
     {
-      title: 'AI Humanizer',
-      description: 'Advanced AI-powered text humanization platform built with Next.js 15, featuring Groq AI integration, user authentication, and PDF processing capabilities.',
-      tags: ['Next.js', 'TypeScript', 'Prisma', 'Groq AI', 'NextAuth'],
+      title: 'Phrasit',
+      description: 'Advanced AI-powered text humanization platform built with Next.js 15, featuring AI integration for natural language processing, user authentication, and PDF processing capabilities.',
+      tags: ['Next.js', 'TypeScript', 'Prisma', 'AI', 'NextAuth'],
       category: 'web',
       gradient: 'from-blue-500 to-cyan-500',
       githubUrl: 'https://github.com/Adeayointech/ai-humanizer',
@@ -18,7 +18,7 @@ export default function Projects() {
       inProgress: false,
     },
     {
-      title: 'Law Firm Platform',
+      title: 'LegalEdge',
       description: 'Comprehensive case management system with role-based access control, document versioning, deadline tracking, and multi-branch support for law firms.',
       tags: ['React', 'Node.js', 'PostgreSQL', 'TypeScript', 'JWT'],
       category: 'web',
@@ -38,7 +38,7 @@ export default function Projects() {
       inProgress: true,
     },
     {
-      title: 'Care Workers LMS',
+      title: 'CareHub LMS',
       description: 'Professional learning management system for care workers with role-based access, progress tracking, quiz system, and assessor feedback.',
       tags: ['PHP', 'MySQL', 'JavaScript', 'cPanel'],
       category: 'web',
@@ -48,14 +48,14 @@ export default function Projects() {
       inProgress: false,
     },
     {
-      title: 'Event Ticketing System',
+      title: 'Accesio',
       description: 'Full-stack event management and ticketing platform with QR code generation, payment processing, and organizer dashboard.',
       tags: ['React', 'PHP', 'MySQL', 'REST API', 'JWT'],
       category: 'web',
       gradient: 'from-indigo-500 to-purple-500',
       githubUrl: 'https://github.com/Adeayointech/ticketing-software',
-      liveUrl: null,
-      inProgress: false,
+      liveUrl: 'https://accesio.vercel.app',
+      inProgress: true,
     },
   ];
 
