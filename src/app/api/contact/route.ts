@@ -1,5 +1,6 @@
 import { NextRequest, NextResponse } from 'next/server';
 import nodemailer from 'nodemailer';
+import type SMTPTransport from 'nodemailer/lib/smtp-transport';
 
 export async function POST(req: NextRequest) {
   try {
@@ -14,7 +15,7 @@ export async function POST(req: NextRequest) {
     }
 
     // Create transporter with explicit SMTP settings
-    const transporter = nodemailer.createTransport({
+    const transportOptions: SMTPTransport.Options = {
       host: 'smtp.gmail.com',
       port: 587,
       secure: false, // Use STARTTLS
@@ -27,7 +28,9 @@ export async function POST(req: NextRequest) {
       },
       // Force IPv4 to avoid IPv6 connectivity issues
       family: 4,
-    });
+    };
+
+    const transporter = nodemailer.createTransport(transportOptions);
 
     // Email to you (the portfolio owner)
     await transporter.sendMail({
