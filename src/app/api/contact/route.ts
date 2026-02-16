@@ -26,8 +26,6 @@ export async function POST(req: NextRequest) {
       tls: {
         rejectUnauthorized: true,
       },
-      // Force IPv4 to avoid IPv6 connectivity issues
-      family: 4,
     };
 
     const transporter = nodemailer.createTransport(transportOptions);
