@@ -96,7 +96,7 @@ export default function Contact() {
                 </div>
               </div>
 
-              <div className="bg-gradient-to-br from-primary-500/10 to-purple-500/10 p-6 rounded-xl border border-primary-500/20">
+              <div className="bg-gradient-to-br from-primary-500/10 to-emerald-500/10 p-6 rounded-xl border border-primary-500/20">
                 <p className="text-slate-300 text-sm leading-relaxed">
                   I'm always open to discussing new projects, creative ideas, or opportunities to be part of your vision.
                 </p>

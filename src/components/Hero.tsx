@@ -8,7 +8,7 @@ export default function Hero() {
       {/* Animated Background */}
       <div className="absolute inset-0 overflow-hidden">
         <div className="absolute w-96 h-96 -top-48 -left-48 bg-primary-500/20 rounded-full blur-3xl animate-pulse"></div>
-        <div className="absolute w-96 h-96 -bottom-48 -right-48 bg-purple-500/20 rounded-full blur-3xl animate-pulse delay-1000"></div>
+        <div className="absolute w-96 h-96 -bottom-48 -right-48 bg-emerald-500/20 rounded-full blur-3xl animate-pulse delay-1000"></div>
       </div>
 
       <div className="container mx-auto px-6 relative z-10">
@@ -23,7 +23,7 @@ export default function Hero() {
           {/* Name */}
           <h1 className="text-5xl md:text-7xl lg:text-8xl font-bold text-white mb-6 animate-slide-up">
             Full-Stack
-            <span className="block text-transparent bg-clip-text bg-gradient-to-r from-primary-400 to-purple-400">
+            <span className="block text-transparent bg-clip-text bg-gradient-to-r from-primary-400 to-emerald-400">
               Developers
             </span>
           </h1>
