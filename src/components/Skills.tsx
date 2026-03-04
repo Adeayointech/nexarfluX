@@ -120,6 +120,11 @@ export default function Skills() {
                 'Jest / Testing',
                 'Figma',
                 'Agile / Scrum',
+                'WordPress',
+                'Elementor',
+                'Shopify',
+                'WooCommerce',
+                'Webflow',
               ].map((tech, index) => (
                 <span
                   key={index}
