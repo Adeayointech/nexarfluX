@@ -18,6 +18,16 @@ export default function Projects() {
       inProgress: false,
     },
     {
+      title: 'TRPPCM Church Website',
+      description: 'Modern, responsive church website featuring blog system, sermon audio library, faith scrolls, giving integration, and contact forms with comprehensive SEO optimization.',
+      tags: ['PHP', 'MySQL', 'JavaScript', 'SEO', 'cPanel'],
+      category: 'web',
+      gradient: 'from-purple-500 to-indigo-500',
+      githubUrl: 'https://github.com/Adeayointech/trppcm-church-website',
+      liveUrl: 'https://trppcm.com',
+      inProgress: false,
+    },
+    {
       title: 'LegalEdge',
       description: 'Comprehensive case management system with role-based access control, document versioning, deadline tracking, and multi-branch support for law firms.',
       tags: ['React', 'Node.js', 'PostgreSQL', 'TypeScript', 'JWT'],
